@@ -91,6 +91,7 @@ export function SidebarNavigation() {
               isCollapsed={isSidebarCollapsed}
               onClick={() => toggleSidebar()}
               className={styles.collapseMenuItem}
+              rotateIcon={isSidebarCollapsed}
             />
           </ul>
         </nav>
