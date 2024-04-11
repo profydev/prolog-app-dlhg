@@ -48,6 +48,27 @@
   }
 }
 
+.logoLarge {
+  width: 7.375rem;
+
+  @media (min-width: breakpoint.$desktop) {
+    &.isCollapsed {
+      display: none;
+    }
+  }
+}
+
+.logoSmall {
+  width: 1.4375rem;
+  display: none;
+
+  @media (min-width: breakpoint.$desktop) {
+    &.isCollapsed {
+      display: block;
+    }
+  }
+}
+
 .logo {
   width: 7.375rem;
 
