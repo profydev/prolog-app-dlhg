@@ -92,4 +92,17 @@ describe("Sidebar Navigation", () => {
       isNotInViewport("nav");
     });
   });
+
+  it("shows large logo in header when in mobile viewport size", () => {
+    // change viewport to mobile
+    cy.viewport("iphone-8");
+    // check that small logo is not visible in header
+    cy.get("header")
+      .find("img[src='/icons/logo-small.svg']")
+      .should("not.be.visible");
+    // check that large logo is visible in header
+    cy.get("header")
+      .find("img[src='/icons/logo-large.svg']")
+      .should("be.visible");
+  });
 });
