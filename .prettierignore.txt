@@ -1,0 +1,2 @@
+# Cypress download file
+cypress/downloads.htm
