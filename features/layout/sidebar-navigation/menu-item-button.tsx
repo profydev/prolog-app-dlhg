@@ -20,6 +20,25 @@ export function MenuItemButton({
   isCollapsed,
   rotateIcon = false,
 }: MenuItemProps) {
+  // Check if the button is the "support" button
+  if (text === "Support") {
+    return (
+      <li className={classNames(styles.listItem, className)}>
+        <a
+          href="mailto:support@prolog-app.com?subject=Support Request:"
+          className={styles.anchor}
+        >
+          <img
+            className={classNames(styles.icon, rotateIcon && styles.rotateIcon)}
+            src={iconSrc}
+            alt={`${text} icon`}
+          />
+          {!isCollapsed && text}
+        </a>
+      </li>
+    );
+  }
+
   return (
     <li className={classNames(styles.listItem, className)}>
       <Button className={styles.anchor} onClick={onClick}>
