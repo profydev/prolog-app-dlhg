@@ -20,7 +20,7 @@ export function MenuItemButton({
   isCollapsed,
   rotateIcon = false,
 }: MenuItemProps) {
-  // Check if the button is the "support" button
+  // Check if the button is the "support" button - if it is, render an anchor tag with a mailto link for support instead of a button
   if (text === "Support") {
     return (
       <li className={classNames(styles.listItem, className)}>
