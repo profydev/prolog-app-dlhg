@@ -36,7 +36,7 @@ describe("Sidebar Navigation", () => {
         .should(
           "have.attr",
           "href",
-          "mailto:support@prolog-app.com?subject=Support Request:",
+          "mailto:support@prolog-app.com?subject=Support Request: ",
         );
     });
 
